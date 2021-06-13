@@ -1,4 +1,4 @@
-## 開発用のコンテナ
+## 開発用のコンテナのテンプレート
 
 Django + PostgreSQL + Redisの構成です.
 RedisはDjango Channels用に入れてあります.

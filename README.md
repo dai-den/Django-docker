@@ -1,9 +1,9 @@
 ## dev
-開発時のコンテナ群
+開発時のコンテナ
 
 Django + PostgreSQL + Redis
 
 ## prod
-運用時のコンテナ群
+運用時のコンテナ
 
 Django + Gunicorn + nginx + PostgreSQL + Redis

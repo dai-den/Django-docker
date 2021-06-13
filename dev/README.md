@@ -21,13 +21,13 @@ Djangoだと開発までの環境構築の手順は以下のような感じに�
 4. startprojectする.myprojectは自分のプロジェクト名に置き換える.
    
 ```Bash
-  docker-compose run web django-admin.py startproject myproject .
+  docker-compose run web django-admin.py startproject testproject .
 ```
 
 5. 生成された以下のファイルで,docker-compose内でDjangoのサービスに設定したデータベース関連の環境変数を設定する.デバッグモードと通信を許可するホストも設定しておく.
 
 ```
-myproject/settings.py
+testproject/settings.py
 ```
 
 6. コンテナを作成する.

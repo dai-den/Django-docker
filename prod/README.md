@@ -27,3 +27,15 @@ $ docker-compose -f docker-compose.prod.yml [command]
 ```
 
 で起動できます.
+
+このフォルダをダウンロードして,docker-compose.prod.ymlがあるディレクトリで
+
+```Bash
+$ docker-compose -f docker-compose.prod.yml up --build
+```
+
+でコンテナを起動し,
+
+127.0.0.1:1337/admin
+
+に接続してadminページが表示されればOK.

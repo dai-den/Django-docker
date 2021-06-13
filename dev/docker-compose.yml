@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - redis
+    environment:
+      - DEBUG=1
+      # setting.py記載のSECRET_KEYを記入
+      - SECRET_KEY='lpu=ez2m6k(umxav96hgfl8mffo*a0u$$+3vu7km!akj=*li^i&'
+      # postgresにログインするためのデータ
+      - DATABASE_ENGINE=django.db.backends.postgresql
+      - DATABASE_DB=django_postgres
+      - DATABASE_USER=django_postgres_user
+      - DATABASE_PASSWORD=django_postgres
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=django_postgres
+      - POSTGRES_USER=django_postgres_user
+      - POSTGRES_PASSWORD=django_postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - postgres_log:/var/postgres_log
+  redis:
+    image: redis:5
+    ports: 
+      - 6379:6379
+volumes: 
+  postgres_data:
+  postgres_log:

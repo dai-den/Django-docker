@@ -14,7 +14,7 @@ services:
     environment:
       - DEBUG=1
       # setting.py記載のSECRET_KEYを記入
-      - SECRET_KEY='lpu=ez2m6k(umxav96hgfl8mffo*a0u$$+3vu7km!akj=*li^i&'
+      - SECRET_KEY='hogehoge'
       # postgresにログインするためのデータ
       - DATABASE_ENGINE=django.db.backends.postgresql
       - DATABASE_DB=django_postgres

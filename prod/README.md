@@ -18,7 +18,7 @@ dev環境がある時,
    
 以上で起動できる(はず).
 
-1~6でGunicornとnginxを追加し,7,8で静的要素を配信するための設定を行なっている.
+1~6でGunicornとnginxを追加し,7,8で静的要素を配信するための設定を行なっています.
 
 docker-compose.prod.ymlを利用してコンテナを立ち上げるときは,
 
@@ -26,4 +26,4 @@ docker-compose.prod.ymlを利用してコンテナを立ち上げるときは,
 $ docker-compose -f docker-compose.prod.yml [command]
 ```
 
-とする.
+で起動できます.
